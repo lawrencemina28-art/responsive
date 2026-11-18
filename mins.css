@@ -1,0 +1,377 @@
+:root {
+    --primary: #243b64;
+    --primary-light: #36588c;
+    --secondary: #64748b;
+    --background: #f1f5f9;
+    --white: #ffffff;
+    --border: #e2e8f0;
+    --success: #16a34a;
+    --shadow: 0 5px 20px rgba(15, 23, 42, 0.07);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: var(--background);
+    color: #1e293b;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+.navbar {
+    background: linear-gradient(
+        135deg,
+        var(--primary),
+        var(--primary-light)
+    );
+    padding: 15px 0;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+}
+
+.navbar-brand {
+    font-size: 23px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: var(--white) !important;
+}
+
+.navbar .nav-link {
+    color: rgba(255,255,255,0.85) !important;
+    font-weight: 500;
+    margin-left: 12px;
+    transition: 0.3s;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: #ffffff !important;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
+.navbar-toggler {
+    border: 1px solid rgba(255,255,255,0.6);
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 3px rgba(255,255,255,0.25);
+}
+
+.dashboard-title {
+    font-size: 30px;
+    font-weight: 750;
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+
+.text-muted {
+    color: var(--secondary) !important;
+}
+
+
+.card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    padding: 24px;
+    height: 100%;
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(15,23,42,0.12);
+}
+
+.card h4 {
+    color: var(--primary);
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.card h6 {
+    font-weight: 650;
+    color: #1e293b;
+}
+
+
+
+.profile-icon {
+    width: 95px;
+    height: 95px;
+    background: linear-gradient(
+        135deg,
+        #dbeafe,
+        #bfdbfe
+    );
+    color: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 42px;
+    margin: 0 auto 18px;
+    border: 4px solid #eff6ff;
+}
+
+.profile-icon + h4 {
+    margin-bottom: 15px;
+}
+
+
+.alert {
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.alert strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.alert-primary {
+    background: #eff6ff;
+    color: #1d4ed8;
+    border-left: 4px solid #3b82f6;
+}
+
+.alert-warning {
+    background: #fffbeb;
+    color: #92400e;
+    border-left: 4px solid #f59e0b;
+}
+
+.alert-success {
+    background: #f0fdf4;
+    color: #166534;
+    border-left: 4px solid #22c55e;
+}
+
+.subject-card {
+    border: 1px solid var(--border);
+    border-left: 5px solid var(--primary);
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 12px;
+    box-shadow: none;
+    transition: 0.3s ease;
+}
+
+.subject-card:hover {
+    background: #f8fafc;
+    border-left-color: #3b82f6;
+    transform: translateX(5px);
+}
+
+.btn {
+    border-radius: 9px;
+    font-weight: 600;
+    padding: 10px 18px;
+    transition: all 0.25s ease;
+}
+
+.btn-primary {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-primary:hover {
+    background: var(--primary-light);
+    border-color: var(--primary-light);
+    transform: translateY(-2px);
+}
+
+.btn:focus-visible {
+    outline: 3px solid #93c5fd;
+    outline-offset: 3px;
+}
+
+
+
+#registration .card {
+    padding: 35px;
+}
+
+.section-title {
+    color: var(--primary);
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.form-label {
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 7px;
+}
+
+.form-control,
+.form-select {
+    border: 1px solid #cbd5e1;
+    border-radius: 9px;
+    padding: 12px 14px;
+    font-size: 15px;
+    background-color: #fff;
+    transition: 0.2s;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 4px rgba(59,130,246,0.12);
+}
+
+.form-check-input:checked {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.form-check-input:focus {
+    box-shadow: 0 0 0 3px rgba(59,130,246,0.2);
+}
+
+.form-text {
+    font-size: 12px;
+    color: var(--secondary);
+}
+
+
+
+footer {
+    background: linear-gradient(
+        135deg,
+        var(--primary),
+        var(--primary-light)
+    );
+    color: white;
+    padding: 22px 15px;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 14px;
+}
+
+
+@media (max-width: 575.98px) {
+
+    .navbar {
+        padding: 12px 0;
+    }
+
+    .navbar-brand {
+        font-size: 19px;
+    }
+
+    .navbar .nav-link {
+        margin: 5px 0;
+        padding: 10px;
+    }
+
+    .dashboard-title {
+        font-size: 23px;
+    }
+
+    .card {
+        padding: 20px;
+        border-radius: 13px;
+    }
+
+    .card:hover {
+        transform: none;
+    }
+
+    #registration .card {
+        padding: 22px 17px;
+    }
+
+    .section-title {
+        font-size: 21px;
+    }
+
+    .profile-icon {
+        width: 80px;
+        height: 80px;
+        font-size: 35px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    footer {
+        margin-top: 30px;
+    }
+}
+
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+
+    .dashboard-title {
+        font-size: 27px;
+    }
+
+    .card {
+        padding: 22px;
+    }
+
+    #registration .card {
+        padding: 30px;
+    }
+
+    .navbar-brand {
+        font-size: 21px;
+    }
+}
+
+
+
+@media (min-width: 992px) {
+
+    .dashboard-title {
+        font-size: 32px;
+    }
+
+    .card {
+        min-height: 100%;
+    }
+
+    .navbar .nav-link {
+        padding: 8px 12px;
+    }
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+    outline: 3px solid #60a5fa;
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
